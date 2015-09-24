@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} | Logged Out {% endblock %}
+
+
+{% include 'base.html'%}
+{% block content %}
+
+
+<div id="bloc_page">
+<h2>{{ message }}</h2>
+<br/>
+<p><a href="{% url 'Godfather:login' %}">Login Again</a></p>
+
+</div>
+</div>
+
+{% endblock %}
