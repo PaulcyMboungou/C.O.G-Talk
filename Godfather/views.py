@@ -19,11 +19,13 @@ from .models import MyUser, Location, Article
 
 def home(request):
 	message  = "Welcome to the C.O.G Talk"
+	u_message = "your actuality"
 	# c = {}
 	# c.update(csrf(request))
 	template = loader.get_template('home.html')
 	context = RequestContext(request, {
-		'message':message
+		'message':message,
+		'u_message':u_message
 			# c,
 		})
 

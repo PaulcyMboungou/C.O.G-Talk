@@ -7,8 +7,18 @@
 {% block content %}
 <div id="bloc_page">
 
-{{ message }}
+<h1>{{ message }}</h1>
+<br/><br/>
 
-
+{% if request.user.is_authenticated %}
+	{{ u_message }}
+	{% else %}
+		<form method="post" action="">
+			{% csrf_token %}
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password" placeholder="Password">
+			<button>Log in</button>
+		</form>
+{% endif %}
 </div>
 {% endblock %}
