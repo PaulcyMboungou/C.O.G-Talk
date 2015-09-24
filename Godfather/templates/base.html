@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" type="" href="{% static "Godfather/css/home.css" %}">
+  <link rel="stylesheet" type="" href="{% static "Godfather/css/bootstrap.css" %}">
+  <link rel="stylesheet" type="" href="{% static "Godfather/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" type="" href="{% static "Godfather/css/font-awesome.min.css" %}">
+  <link rel="stylesheet" type="" href="{% static "Godfather/css/bootstrap.icon-large.css" %}">
+  <link rel="stylesheet" type="" href="{% static "Godfather/css/bootstrap.icon-large.min.css" %}">
+  <script type="text/javascript" src="{% static "Godfather/js/jquery.js" %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="{% static "Godfather/js/farel.js" %}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="{% static "Godfather/js/bootstrap.js" %}"></script>
+</head>
+<body style="background-color:#E6E6E6;">
+<hr>
+{% block content %}
+
+{% endblock %}
+
+
+</body>
+</html>
