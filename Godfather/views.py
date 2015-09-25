@@ -45,7 +45,7 @@ def home(request):
 		return HttpResponse(template.render(context))
 
 def login(request):
-	message = "Welcome back To C.O.G Talk"
+	message = "Welcome back to C.O.G Talk"
 	u_message = "You are logged in "
 
 	if request.method == 'POST':

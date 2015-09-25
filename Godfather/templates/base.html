@@ -16,9 +16,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="{% static "Godfather/js/bootstrap.js" %}"></script>
 </head>
-<body>
+<body style="background-color:#F0F0F0;">
+<div id="bloc">
+ <input type="search" name="search">
+ <button>Search</button>
+</div>
+<div class="header">
 <ul>
+  <!-- <a href="{% url 'Godfather:home' %}"><li><i class="fa fa-home"></i></li></a> -->
 {% if request.user.is_authenticated %}
+  <a href=""><li><i class="fa fa-users"></i></li></a>
+  <a href=""><li><i class="fa fa-envelope"></i></li></a>
+  <a href=""><li><i class="fa fa-globe"></i></li></a>
   <a href="{% url 'Godfather:profile'%}"><li> {{ request.user.username }} </li></a>
   <a href="{% url 'Godfather:logout' %}"><li> Logout </li></a>
   {% else %}
@@ -26,7 +35,32 @@
   <a href=""><li> Sign Up </li></a>
 {% endif %}
 </ul>
-<hr>
+</div>
+
+<div class="mainNav">
+   <div class="logo">
+     Logo
+   </div>
+       <div class="space">
+         &nbsp;
+       </div>
+   <div class="menubar">
+      <ul>
+        <a href=""><li>HOME</li></a>
+        <a href=""><li>NEWS</li></a>
+        <a href=""><li>BLOG</li></a>
+        <a href=""><li>MEMBERSHIP</li></a>
+        <a href=""><li>ABOUT US</li></a>
+      </ul>
+   </div>
+
+</div>
+
+<div class="line">
+  
+</div>
+<br/>
+<!-- <hr> -->
 {% block content %}
 
 {% endblock %}
