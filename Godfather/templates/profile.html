@@ -5,14 +5,15 @@
 
 {% include 'base.html'%}
 {% block content %}
-<div id="bloc_page">
+<div id="profile_bloc_page">
 
 <div class="backgroundImg">
    <div class="profileImg">
-   	  <button> Add Profile <i class="fa fa-upload"></i></button>
+   	  <button> Add Profile <i class="fa fa-camera"></i></button>
    </div>
-   <br/>
-   <button> Add Background Image <i class="fa fa-upload"></i></button>	
+   <!-- <h3 style="color:white;">{{ request.user.username }}</h3> -->
+   <!-- <br/> -->
+   	  <button> Add Background Image <i class="fa fa-camera"></i></button>	
 </div>
 <div class="profileNav">
     <ul>
@@ -24,6 +25,8 @@
 	
 </div>
 <hr>
+
+
 
 </div>
 {% endblock %}

@@ -1,3 +1,7 @@
+body{
+	min-width: 590px;
+}
+
 #bloc{
 	background-color: #EEEEEE;
     width: 80%;
@@ -9,6 +13,16 @@
 }
 
 #bloc_page{
+	background-color: white;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: arial;
+	/*text-align: center ;*/
+	box-shadow: 0px 0px 25px #888888;
+}
+
+#profile_bloc_page{
 	background-color: white;
 	width: 80%;
 	margin: 0 auto;
@@ -131,24 +145,40 @@ a{
 .backgroundImg{
 	width: 100%;
 	height: 350px;
+	background-color: #001433;
 	padding: 20px;
 	border: 1px solid #E7E7E7;
-	border-radius: 8px 8px 0 0;
-
-}
-
-.backgroundImg button{
+	border-radius: 6px 6px 0 0;
 	text-align: right;
+
 }
+
+/*.backgroundImg button{
+	position: absolute;
+	right:    0;
+	bottom:   0;
+}*/
 
 .profileImg{
-	width: 170px;
+	width: 180px;
 	height: 170px;
-	/*background-image: url('../images/picture.jpg');*/
+	background-image: url('../images/picture.jpg');
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 	border: 1px solid #E7E7E7;
 	border-radius: 5px 5px 5px 5px;
-	margin-top: 100px;
+	margin-top: 140px;
+	float: left;
+	overflow: hidden;
 }
+
+/*.profileImg button{
+	position: absolute;
+	right:    0;
+	bottom:   0;
+}*/
 
 .profileNav{
 	background-color: #F3F3F3;
@@ -171,5 +201,27 @@ a{
 }
 
 .profileNav ul li:hover{
-	background-color: #E7E7E7;
+	background-color: #DBDBDB;
+}
+
+@media screen and (max-width: 950px){
+	#bloc{
+		width: 100%;
+	}
+	#bloc_page{
+		width: 95%;
+	}
+	#profile_bloc_page{
+		width: 100%;
+	}
+	.backgroundImg{
+		width: 100%;
+	}
+	.profileNav{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px){
+   
 }
