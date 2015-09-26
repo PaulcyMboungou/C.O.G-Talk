@@ -1,1 +1,29 @@
-farel
+{% extends 'base.html' %}
+
+{% block title %}{{ request.user.username }}{% endblock %}
+
+
+{% include 'base.html'%}
+{% block content %}
+<div id="bloc_page">
+
+<div class="backgroundImg">
+   <div class="profileImg">
+   	  <button> Add Profile <i class="fa fa-upload"></i></button>
+   </div>
+   <br/>
+   <button> Add Background Image <i class="fa fa-upload"></i></button>	
+</div>
+<div class="profileNav">
+    <ul>
+    	<a href=""><li>My News</li></a>
+    	<a href=""><li>Infos</li></a>
+    	<a href=""><li>Friends</li></a>
+    	<a href=""><li>Photos</li></a>
+    </ul>
+	
+</div>
+<hr>
+
+</div>
+{% endblock %}

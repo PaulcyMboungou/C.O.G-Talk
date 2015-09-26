@@ -70,9 +70,10 @@ def login(request):
 
 @login_required
 def profile(request):
+	message = ""
 	template = loader.get_template('profile.html')
 	context = RequestContext(request, {
-				# c,
+				'message':message
 			})
 
 	return HttpResponse(template.render(context))
