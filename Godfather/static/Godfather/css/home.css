@@ -1,5 +1,5 @@
 body{
-	min-width: 590px;
+	min-width: 690px;
 }
 
 #bloc{
@@ -70,8 +70,6 @@ a{
 .logo{
     width: 25%;
     padding-left: 10%;
-    /*margin-top: 70px;*/
-    /*background-color: white;*/
     height: 100%;
     float: left;
 	overflow: hidden;
@@ -85,6 +83,7 @@ a{
 
 .menubar{
 	width: 70%;
+	height: 100%;
 	padding-right: 10%;
 	overflow: hidden;
 }
@@ -204,6 +203,19 @@ a{
 	background-color: #DBDBDB;
 }
 
+.arrow{
+	width: 100%;
+	height: 100%;
+	background: #003D99;
+	font-size: 20px;
+	text-align: right;
+	/*padding: 15px 10px;*/
+	box-sizing:border-box;
+	cursor: pointer;
+	color: white;
+	display: none;
+}
+
 @media screen and (max-width: 950px){
 	#bloc{
 		width: 100%;
@@ -220,6 +232,42 @@ a{
 	.profileNav{
 		width: 100%;
 	}
+}
+/*(TROUVER UN MOYEN DE FAIRE BASCULER LE MENUBAR UL LI VERS LA GAUCHE)*/
+@media screen and (max-width: 920px){
+	.logo{
+    width: 25%;
+    height: 100%;
+    padding-left: 10%;
+   /* margin-top: 70px;
+    background-color: white;
+    float: left;
+	overflow: hidden;*/
+	}
+	.menubar{
+		width: 70%;
+		float: left;
+		overflow: hidden;
+	}
+	.show{
+    	max-height: 200px;
+    }
+	.menubar ul{
+		max-height: 0;
+	}
+	.menubar ul li{
+        box-sizing:border-box;
+		width: 100%;
+		text-align: left;
+	}
+    .arrow{
+        display: block;
+        width: 2.5%;
+        overflow: hidden;
+    }
+    .arrow i{
+    	margin-top: 75px;
+    }
 }
 
 @media screen and (max-width: 480px){
