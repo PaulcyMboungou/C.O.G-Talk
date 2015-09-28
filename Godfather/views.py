@@ -88,3 +88,35 @@ def logout(request):
 			})
 
 	return HttpResponse(template.render(context))
+
+def news(request):
+	message = 'Breaking news'
+	template = loader.get_template('news.html')
+	context = RequestContext(request, {
+				# c,
+				'message':message
+			})
+
+	return HttpResponse(template.render(context))
+
+def talents(request):
+	template = loader.get_template('talents.html')
+	context = RequestContext(request, {
+
+		})
+	return HttpResponse(template.render(context))
+
+@login_required
+def talk(request):
+	template = loader.get_template('social.html')
+	context = RequestContext(request, {
+
+		})
+	return HttpResponse(template.render(context))
+
+def about(request):
+	template = loader.get_template('about.html')
+	context = RequestContext(request, {
+
+		})
+	return HttpResponse(template.render(context))
