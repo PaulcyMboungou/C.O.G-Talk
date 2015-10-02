@@ -54,7 +54,7 @@ class MyUser(AbstractBaseUser):
 	last_name = models.CharField(max_length=50, blank=True)
 	first_name = models.CharField(max_length=50 , blank=True)
 	joined = models.DateTimeField(auto_now_add=True , null=True)
-	profile_image = models.ImageField(upload_to='Images/%Y/%m/%d', blank=True)
+	profile_image = models.ImageField(upload_to='Images/Profile Pictures', default="media/default/picture.jpg", height_field=None, width_field=None, blank=True)
 
 	USERNAME_FIELD = 'username'
 	REQUIRED_FIELDS = ['email']
@@ -91,6 +91,11 @@ class MyUser(AbstractBaseUser):
 		authenticated in templates.
 		"""
 		return True
+
+	def set_profile_image(self):
+		_profile_image = self.profile_image
+		if not _profile_image:
+			self.profile_image="/media/picture.png"
 
 class Comment(models.Model):
 	comment = models.TextField()

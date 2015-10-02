@@ -123,7 +123,8 @@ MEDIA_URL = '/media/'
 
 #Django registration Redux Settings
 ACCOUNT_ACTIVATION_DAYS = 7
-REGISTRATION_AUTO_LOGIN = False
+REGISTRATION_AUTO_LOGIN = True
+SITE_ID = 1
 
 EMBED_VIDEO_BACKENDS = (
     'embed_video.backends.YoutubeBackend',

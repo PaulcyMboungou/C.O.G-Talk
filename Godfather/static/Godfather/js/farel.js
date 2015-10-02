@@ -28,6 +28,12 @@ function Comment()
 
 }
 
+$(document).ready(function(){
+  $('#addProfile').click(function(){
+  	$('#ImgUpload').trigger('click');
+  });
+});
+
 
 
 

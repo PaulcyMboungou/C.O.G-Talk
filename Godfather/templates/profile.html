@@ -9,11 +9,19 @@
 
 <div class="backgroundImg">
    <div class="profileImg">
-   	  <button> Add Profile <i class="fa fa-camera"></i></button>
+      <a href=""><img src="{{ user.profile_image.url }}" width="180" height="170"></a>
+        <div class="caption">
+            <a id="addProfile"><p> Add Profile <i class="fa fa-camera"></i></p></a>
+        </div>
+        <div id="ImgUploader">
+         <form method="post" action=".">
+           <input type="file" id="ImgUpload">
+         </form>
+        </div>
    </div>
    <!-- <h3 style="color:white;">{{ request.user.username }}</h3> -->
    <!-- <br/> -->
-   	  <button> Add Background Image <i class="fa fa-camera"></i></button>	
+   	  <!-- <button> Add Background Image <i class="fa fa-camera"></i></button>	 -->
 </div>
 <div class="profileNav">
     <ul>
@@ -26,7 +34,12 @@
 </div>
 <hr>
 
-
+<!-- <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                <p>
+                    <input id="id_image" type="file" class="" name="image">
+                </p>
+                <input type="submit" value="Submit" />
+            </form> -->
 
 </div>
 {% endblock %}
